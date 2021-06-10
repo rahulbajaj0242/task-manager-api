@@ -94,9 +94,9 @@ router.delete('/users/me', auth, async (req, res) => {
   try {
     await req.user.remove();
     sendCancelEmail(req.user.email, req.user.name);
-    res.send(user);
+    res.send(req.user);
   } catch (error) {
-    res.status(500).send(error);
+    res.status(500).send(error.message);
   }
 });
 

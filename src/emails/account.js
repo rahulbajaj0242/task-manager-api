@@ -15,7 +15,7 @@ const sendWelcomeEmail = (email, name) => {
     .send(msg)
     .then(() => {})
     .catch((error) => {
-      console.error(error);
+      // console.error(error);
     });
 };
 
